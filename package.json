@@ -1,0 +1,14 @@
+{
+  "name": "com.supersuperstar.js.promiseutils",
+  "version": "0.0.1",
+  "description": "A set of helper functions to make ES6 Promise easier to use",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\"Charles Liu\" <dodoinblue@gmail.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "standard": "^11.0.1"
+  }
+}
