@@ -1,4 +1,4 @@
-export class Deferred {
+class Deferred {
   constructor () {
     this.promise = new Promise((resolve, reject) => {
       this.resolve = resolve
@@ -7,14 +7,14 @@ export class Deferred {
   }
 }
 
-export function timeoutPromise (promise, milliseconds) {
+function timeoutPromise (promise, milliseconds) {
   return Promise.race([
     promise,
     delay(milliseconds)
   ])
 }
 
-export function delay (milliseconds) {
+function delay (milliseconds) {
   let timeoutDefer = new Deferred()
   setTimeout(() => {
     timeoutDefer.resolve({
@@ -24,4 +24,10 @@ export function delay (milliseconds) {
     })
   }, milliseconds)
   return timeoutDefer.promise
+}
+
+module.exports = {
+  Deferred,
+  timeoutPromise,
+  delay
 }
