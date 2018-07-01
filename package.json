@@ -1,6 +1,6 @@
 {
   "name": "@dodoinblue/promiseutils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A set of helper functions to make ES6 Promise easier to use",
   "main": "index.js",
   "types": "index.d.ts",
