@@ -1,5 +1,5 @@
 {
-  "name": "com.supersuperstar.js.promiseutils",
+  "name": "@dodoinblue/promiseutils",
   "version": "0.0.2",
   "description": "A set of helper functions to make ES6 Promise easier to use",
   "main": "index.js",
