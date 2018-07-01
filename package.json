@@ -1,8 +1,9 @@
 {
   "name": "@dodoinblue/promiseutils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A set of helper functions to make ES6 Promise easier to use",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
