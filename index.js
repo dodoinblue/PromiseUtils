@@ -14,6 +14,19 @@ function timeoutPromise (promise, milliseconds) {
   ])
 }
 
+function timeoutPromiseWithError (promise, milliseconds) {
+  return Promise.race([
+    promise,
+    delay(milliseconds).then(result => {
+      if (result.state === 'timedOut') {
+        throw new Error(`Timeout after ${milliseconds} milliseconds`)
+      } else {
+        return result
+      }
+    })
+  ])
+}
+
 function delay (milliseconds) {
   let timeoutDefer = new Deferred()
   setTimeout(() => {
@@ -29,5 +42,6 @@ function delay (milliseconds) {
 module.exports = {
   Deferred,
   timeoutPromise,
+  timeoutPromiseWithError,
   delay
 }
